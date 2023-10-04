@@ -65,8 +65,22 @@
   `Authorization : Token {токен авторизации}`   
   _Response Body_:
   ```css
-   [{
-      "text": string,
-      "date": string
-   }]
+
+## Дополнительно
+Телеграм бот использует этот эндпойнт для подключения чата к API.  
+
+* **POST**  `/connect/{сгенерированный токен}`
+   
+  _Request Body_:
+  ```css
+   {
+       "tg_chat_id": string
+   }
+  ```
+  _Response Body_:
+  ```css
+   {
+       "tg_chat_id": string,
+       "token": string
+   }
   ```
